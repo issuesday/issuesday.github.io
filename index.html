@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<!--[if IE 9]>
+	<html class="ie9" lang="en">
+<![endif]-->
+	
+	<head>
+        
+		<title>Issues Day 2015</title>
+		
+		<meta charset=utf-8>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+		
+		
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+function initialize() {
+  var myLatlng = new google.maps.LatLng(29.526160,-98.423735);
+  var mapOptions = {
+    zoom: 13,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: "Saint Mary's Hall"
+  });
+}
+
+        google.maps.event.addDomListener(window, 'load', initialize);</script>
+	</head>
+	
+	<body>	
+		
+		<!-- BEGIN MAIN -->
+		<div class="section-main" id="top">
+			<div class="mini-container main-mini-container">
+				<div class="title">
+					<div class="header">
+						<img src="images/logo.png" class="logo" />
+						<h1>Personal Privacy and National Security<br>Where is the balance?</h1>
+					</div>
+
+					<div class="content">
+                        <div class="spacer" style="height: 20px"></div>
+                        <div class="navigation">
+							<a class="nav-button" onclick="showSection('section-about')">About Us</a>
+							<a class="nav-button" onclick="showSection('section-topic')">Topic Info</a>
+							<a class="nav-button" onclick="showSection('section-contact')">Contact</a>
+						</div>
+						<div id="countdown">
+							<div class="countdown-elem elem-days">
+								
+									<h2 class="days">00</h2>
+								
+								<span class="time_Days">days</span>
+							</div><!--
+							--><div class="countdown-elem elem-hours">
+									<h2 class="hours">00</h2>
+								
+								<span class="time_Hours">hours</span>
+							</div><!--
+							--><div class="countdown-elem elem-minutes">
+									<h2 class="minutes">00</h2>
+								<span class="time_Minutes">minutes</span>
+							</div><!--
+							--><div class="countdown-elem elem-seconds">
+									<h2 class="seconds">00</h2>
+								<span class="time_Seconds">seconds</span>
+							</div>
+						</div>
+						
+						<div class="social-nav">
+							<!-- Social Icons -->
+							<style>
+                            #map-canvas {
+                                height: 100%;
+                                width: 100%;
+                            }
+                            </style>
+							<!-- End Social Icons -->
+						</div>
+					</div>
+				</div>
+			</div>
+						
+		</div>		
+		<!-- END MAIN -->
+		
+		<!-- BEGIN SUBSCRIBE PAGE -->
+		<div class="scrollsection section-about">
+			<div class="mini-container">
+				<div class="header">
+					<a class="nav-button" onclick="closeSection('section-about')">close</a>
+					<h2>About Issues Day</h2>
+				</div>
+				<div class="content">
+					<p>Welcome to Issues Day!<br><br> It is an annual Saint Mary’s Hall tradition to conduct an in-depth discussion of an intellectual and timely topic. Allowing open and direct study of difficult subjects provides a wonderful compliment to the students and faculty of our school. To encourage such dialogue on the toughest questions of our time shows respect for our students’ intellect and maturity while highlighting our faculty’s professionalism and abilities in working with our students to help them develop their own beliefs and opinions regarding difficult topics. <br><br>As in the past, this year’s topic is not one which yields an easy answer or simple consensus. However, our students’ active participation will help them view opposing opinions as they solidify their own thoughts and beliefs. We are encouraging our community to examine the topic with openness and respect for self and others. <br><br>I want to thank the Junior Class Issues Day Committee. The speaker line-up alone serves as excellent evidence of the Committee’s success and dedication. I also want to express particular and deep gratitude to the faculty leadership on the Issues Day Committee: Barb Bertoldo, Jen- nifer Arce, Gerri Walls, Jeff Hebert, and Megan Soukup. Enjoy the discourse!</p>		
+					
+				
+				</div>
+                <div class="navigation" style="text-align:center">
+                    <h2>Previous Issues Day Brochures</h2>
+							<a class="nav-button" href="#">2014</a>
+							<a class="nav-button" href="#">2013</a>
+							<a class="nav-button" href="#">2012</a>
+						</div>
+			</div>
+            
+		</div>
+		<!-- END SUBSCRIBE PAGE -->
+		
+		
+		<!-- BEGIN ABOUT PAGE -->
+		<div class="scrollsection section-topic">
+			<div class="mini-container">
+				<div class="header">
+					<a class="nav-button" onclick="closeSection('section-topic')">close</a>
+					<h2>About the Topic</h2>
+				</div>
+				<div class="content">
+					<p>Lorem ipsum dolor sit amet, adipiscing elit. Sed vestibulum hendrerit turpis id tempor. Suspendisse orci sapien, iaculis a rutrum at, scelerisque vitae arcu. Donec quis justo vestibulum, euismod erat eu, gravida sem. Nullam euismod ultrices justo, id tempor orci ullamcorper in.</p>
+					<p>Nam commodo, lectus a consectetur hendrerit, justo arcu imperdiet elit, id tincidunt nisl sapien eu eros. Duis suscipit sapien ac massa elementum, ac vehicula enim pretium. Nunc nec erat nibh. Donec rutrum iaculis massa et dapibus. Donec cursus, justo quis aliquet pharetra, lorem enim rhoncus magna, ac porta arcu dolor sed nulla.</p>			
+					
+					
+				</div>
+			</div>
+		</div>
+		<!-- END ABOUT PAGE -->
+		
+		<!-- BEGIN CONTACT PAGE -->
+		<div class="scrollsection section-contact">
+			<div class="mini-container">
+				<div class="header">
+					<a class="nav-button" onclick="closeSection('section-contact')">close</a>
+					<h2>contact</h2>
+				</div>
+				<div class="content">
+					<div class="contact-box-container">
+					<div class="contact-box left">
+						<p>If you have any questions, comments or suggestions, we would love to hear from you. Please get in touch at any time and we'll get back to you within 24 hours.</p>
+						<ul>
+							<li><i class="fa fa-fw fa-map-marker"></i>9401 Starcrest Drive, San Antonio, TX 78217
+</li>
+							<li><i class="fa fa-fw fa-phone"></i>(210) 483 9100</li>
+							<li><i class="fa fa-fw fa-envelope-o"></i><a href="mailto:">bbertoldo@smhall.org</a></li>
+							<li><i class="fa fa-fw fa-globe"></i><a href="#htt">smhall.org</a></li>
+						</ul>
+					</div>
+					<div class="contact-box-spacer"></div>
+					<div class="contact-box right" id="map-canvas">
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END CONTACT PAGE -->
+		
+		<!-- Background Video container -->
+		
+		<!-- Loading Page Overlay -->
+		<div class="page-loading">
+			<noscript><div class="noscript-error"><i class="fa fa-info-circle"></i>Enable JavaScript to see this site working properly.</div></noscript>
+			<div class="square-loader-wrap">
+				<div class="square-loader"></div>
+				<div class="square-loader"></div>
+				<div class="square-loader"></div>
+				<div class="square-loader"></div>
+			</div>
+		</div>
+
+		<!-- JAVASCRIPT -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+			
+			<!-- All set up / customisation variables for slideshow and video background etc. in custom.js file -->
+			<script type="text/javascript" src="custom.js"></script>
+		
+		<script type="text/javascript" src="js/customoverlay.js"></script>
+		<script type="text/javascript" src="js/countdown.js"></script>
+		
+	
+		<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+		
+		<script type="text/javascript" src="js/placeholders.min.js"></script>
+			
+				<script type="text/javascript">
+								
+			// No need to edit here - all settings in custom.js file
+					
+			$(document).ready(function(){
+
+				if(videoBackground == 'on') {			
+				    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+						$(".player").hide();
+						$.backstretch(slideshowBackgroundURLS, {
+			    	    	fade: slideshowFade,
+			    	   		duration: slideshowDuration
+			    		});
+			    		$('.backstretch img').load(function(){
+							if(preloader == 'on') {
+   								$('.page-loading').delay(1500).fadeOut(1000, function() { animateInStart(); });
+							}
+							else {
+								animateInStart();
+							}
+						});
+					}
+					else {
+						$(".player").mb_YTPlayer({
+							videoURL: videoBackgroundURL,
+							containment: 'body',
+							autoPlay: true,
+							mute: videoMuted,
+							startAt:0,
+							opacity:1
+						});
+						$('#bgndVideo').on("YTPStart",function(){
+							if(preloader == 'on') {
+   								$('.page-loading').delay(1500).fadeOut(1000, function() { animateInStart(); });
+							}
+							else {
+								animateInStart();
+							}
+						});
+						
+						if(videoMuted == false) {
+							$('.videoMuteButton').show();
+						}
+					}
+				}
+				else {
+					$.backstretch(slideshowBackgroundURLS, {
+			    	    fade: slideshowFade,
+			    	    duration: slideshowDuration
+			    	});
+			    	$('.backstretch img').load(function(){
+						if(preloader == 'on') {
+   								$('.page-loading').delay(1500).fadeOut(1000, function() { animateInStart(); });
+							}
+							else {
+								animateInStart();
+							}
+					});
+				}
+				
+				$("#countdown").countdown({ date: countdownDate	});
+				
+				if ($(window).width() < 599) {
+					$('.about-container .about-box-spacer').css('height', '1px');
+				}
+				else {
+					var ieAboutSpacerHeight = $('.about-box-text').height() + 'px';
+					$('.about-container .about-box-spacer').css('height', ieAboutSpacerHeight);
+				}
+			});
+		</script>
+      
+	</body>
+</html>
