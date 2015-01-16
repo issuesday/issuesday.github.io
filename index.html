@@ -18,10 +18,11 @@
 		<link rel="stylesheet" type="text/css" href="css/animate.css" />
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script>
+        var map;
 function initialize() {
   var myLatlng = new google.maps.LatLng(29.526160,-98.423735);
   var mapOptions = {
@@ -37,7 +38,13 @@ function initialize() {
   });
 }
 
-        google.maps.event.addDomListener(window, 'load', initialize);</script>
+        google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, "resize", function() {
+ var center = map.getCenter();
+ google.maps.event.trigger(map, "resize");
+ map.setCenter(center); 
+});
+        </script>
 	</head>
 	
 	<body>	
@@ -54,8 +61,8 @@ function initialize() {
 					<div class="content">
                         <div class="spacer" style="height: 20px"></div>
                         <div class="navigation">
-							<a class="nav-button" onclick="showSection('section-about')">About Us</a>
-							<a class="nav-button" onclick="showSection('section-topic')">Topic Info</a>
+							<a class="nav-button" onclick="showSection('section-about')">About </a>
+							<a class="nav-button" onclick="showSection('section-topic')">Speaker Info</a>
 							<a class="nav-button" onclick="showSection('section-contact')">Contact</a>
 						</div>
 						<div id="countdown">
@@ -82,12 +89,7 @@ function initialize() {
 						
 						<div class="social-nav">
 							<!-- Social Icons -->
-							<style>
-                            #map-canvas {
-                                height: 100%;
-                                width: 100%;
-                            }
-                            </style>
+							
 							<!-- End Social Icons -->
 						</div>
 					</div>
@@ -105,15 +107,18 @@ function initialize() {
 					<h2>About Issues Day</h2>
 				</div>
 				<div class="content">
-					<p>Welcome to Issues Day!<br><br> It is an annual Saint Mary’s Hall tradition to conduct an in-depth discussion of an intellectual and timely topic. Allowing open and direct study of difficult subjects provides a wonderful compliment to the students and faculty of our school. To encourage such dialogue on the toughest questions of our time shows respect for our students’ intellect and maturity while highlighting our faculty’s professionalism and abilities in working with our students to help them develop their own beliefs and opinions regarding difficult topics. <br><br>As in the past, this year’s topic is not one which yields an easy answer or simple consensus. However, our students’ active participation will help them view opposing opinions as they solidify their own thoughts and beliefs. We are encouraging our community to examine the topic with openness and respect for self and others. <br><br>I want to thank the Junior Class Issues Day Committee. The speaker line-up alone serves as excellent evidence of the Committee’s success and dedication. I also want to express particular and deep gratitude to the faculty leadership on the Issues Day Committee: Barb Bertoldo, Jen- nifer Arce, Gerri Walls, Jeff Hebert, and Megan Soukup. Enjoy the discourse!</p>		
+					<p>Issues Day is an annual Saint Mary’s Hall tradition put on by the Junior Class Issues Day Committee of an in-depth discussion of an intellectual and timely topic. Open and direct study of difficult subjects provides a wonderful opportunity to the students and faculty of our school, encouraging dialogue on the toughest questions of our time. The event shows respect for our students’ intellect and maturity while highlighting our faculty’s professionalism and abilities in working with our students to help them develop their own beliefs and opinions regarding difficult topics. As in the past, this year’s topic is not one which yields an easy answer or simple consensus. However, our students’ active participation will help them view opposing opinions as they solidify their own thoughts and beliefs. We are encouraging our community to examine the topic with openness and respect for self and others, and with gratitude to our esteemed speakers who have donated their time to further our understanding of this topic.  This year’s discussion focuses on the relationship between privacy and national security, an increasingly prominent issue in our time, and will investigate surveillance policy and practices, and our society’s approach to these now and in the near future.
+</p>		
 					
 				
 				</div>
-                <div class="navigation" style="text-align:center">
+                <div class="content" style="text-align:center">
                     <h2>Previous Issues Day Brochures</h2>
-							<a class="nav-button" href="#">2014</a>
-							<a class="nav-button" href="#">2013</a>
-							<a class="nav-button" href="#">2012</a>
+							<a class="nav-button" href="http://lgdata.s3-website-us-east-1.amazonaws.com/docs/1199/1303996/Issues_Day_Program_2014_for_website.pdf" target="_blank">2014</a>
+							<a class="nav-button" href="http://lgdata.s3-website-us-east-1.amazonaws.com/docs/1199/1304339/Issues_Day_Program_2013_FINAL_update.pdf" target="_blank">2013</a>
+							<a class="nav-button" href="http://lgdata.s3-website-us-east-1.amazonaws.com/docs/1199/1304341/Issues_Day_Program_2012.pdf" target="_blank">2012</a>
+                    <a class="nav-button" href="http://lgdata.s3-website-us-east-1.amazonaws.com/docs/1199/1304344/Issues_Day_Program_2011.pdf" target="_blank">2011</a>
+                    
 						</div>
 			</div>
             
@@ -126,16 +131,107 @@ function initialize() {
 			<div class="mini-container">
 				<div class="header">
 					<a class="nav-button" onclick="closeSection('section-topic')">close</a>
-					<h2>About the Topic</h2>
+					<h2>Speakers</h2>
 				</div>
 				<div class="content">
-					<p>Lorem ipsum dolor sit amet, adipiscing elit. Sed vestibulum hendrerit turpis id tempor. Suspendisse orci sapien, iaculis a rutrum at, scelerisque vitae arcu. Donec quis justo vestibulum, euismod erat eu, gravida sem. Nullam euismod ultrices justo, id tempor orci ullamcorper in.</p>
-					<p>Nam commodo, lectus a consectetur hendrerit, justo arcu imperdiet elit, id tincidunt nisl sapien eu eros. Duis suscipit sapien ac massa elementum, ac vehicula enim pretium. Nunc nec erat nibh. Donec rutrum iaculis massa et dapibus. Donec cursus, justo quis aliquet pharetra, lorem enim rhoncus magna, ac porta arcu dolor sed nulla.</p>			
 					
-					
-				</div>
-			</div>
-		</div>
+
+				 <script>
+                               $(function() {
+    $('.nav-button2').click(function() {
+        $(this).next().slideToggle();
+    });
+});
+                                </script>   	
+                <div class="about-container">
+                    <div class="about-row" style="padding-bottom: 40px;">
+						
+						<div class="about-box">
+							<div class="about-box-text">
+								<span class="about-logo"><img src="img/daniel.png"></span>
+                                
+                                <h3><b>Mr. Daniel Castro</b><br>
+                                    Senior Analyst,<br>
+                                    Information Technology and Innovation Foundation
+                                    <br><br>
+                                </h3>
+                                <div class="nav-button2"> <a> Read More</a> </div>
+                                    <div class="slidecontent"> 
+                                       Mr. Castro is a Senior Analyst with the Information Technology and Innovation Foundation and Director of the Center for Data Innovation. He writes and speaks on a variety of issues related to information technology and internet policy, including privacy, security, intellectual property, internet governance, e-government, and accessibility for people with disabilities. His work has been quoted and cited in numerous media outlets, including The Washington Post, The Wall Street Journal, NPR, USA Today, Bloomberg News, and BusinessWeek. In 2013, Mr. Castro was named to FedScoop’s list of “Top 25 most influential people under 40 in government and tech.”
+Before joining ITIF, Mr. Castro worked as an IT analyst at the Government Accountability Office (GAO) where he audited IT security and management controls at various government agencies. He contributed to GAO reports on the state of information security at a variety of federal agencies, including the Securities and Exchange Commission (SEC) and the Federal Deposit Insurance Corporation (FDIC). In addition, Mr. Castro was a Visiting Scientist at the Software Engineering Institute (SEI) in Pittsburg, Pennsylvania where he developed virtual training simulations to provide clients with hands-on training of the latest information security tools.
+He as a B.S. in Foreign Service from Georgetown University and an M.S. in Information Security Technology and Management from Carnegie Mellon University.
+                                    </div>
+<style>
+                                .slidecontent {display:none}
+                                div.nav-button:hover {
+                                    cursor:pointer
+                                }
+                                </style>
+                                 
+								
+                             
+							</div>
+						</div>
+						<div class="about-box-spacer"></div>
+						<div class="about-box">
+							<div class="about-box-text">
+								<span class="about-logo"><img src="img/asim.png"></span>
+                                <h3><b>Mr. Asim Ghafoor</b><br>
+Attorney at Law,<br>
+The Law Office of Asim Ghafoor
+                                    <br><br>
+                                </h3>
+                                  <div class="nav-button2"> <a> Read More</a> </div>
+                                    <div class="slidecontent"> 
+                                        Mr. Ghafoor has over two decades of experience in advising public policymakers and clients on a variety of legal, political, and trade issues. He is a frequent speaker at seminars, conferences, and in the media on topics of law enforcement, international affairs, finance and politics. He has spoken at Harvard, the University of Virginia School of Law, and Chicago’s Kent College of Law.
+Mr. Ghafoor has represented a number of companies, institutions, and individuals, both overseas and in the U.S., on matters of compliance, regulation, and litigation. As a business law attorney, he has assisted and advised on the creation of a number of businesses and non-profits. In addition, he has extensive experience with trade missions and Congressional delegations, and he assisted in planning and executing official missions to North Africa, the Middle East and Asia.
+Previously, Mr. Ghafoor worked in the Texas House of Representatives, giving him great insight into the legislative and law-making process. From 1997 to 2000, he served as Legislative Assistant to Congressman Ciro D. Rodriguez (D-TX) and advised the Congressman on a variety of issues, including international affairs, banking, civil rights, transportation, armed services and veterans’ affairs.
+Mr. Ghafoor earned his JD from the University of Texas School of Law.
+                                    </div></a>
+
+                           
+								
+                             
+							</div>
+						</div>
+                    </div>
+               
+                    <div class="about-row" style="padding-bottom: 40px;">
+							<div class="about-box">
+							<div class="about-box-text">
+								<span class="about-logo"><img src="img/mccall.png"></span>
+                                <h3><b>Ms. Ginger McCall<br></b>
+Associate Director,<br>
+Electronic Privacy Information Center (EPIC)<br>
+Director,<br>
+Open Government Program and EPIC IPIOP Program <br><br>
+                                </h3>
+                                  <div class="nav-button2"> <a> Read More</a> </div>
+                                    <div class="slidecontent"> 
+                                       Ms. McCall is Associate Director of EPIC and Director of EPIC’s Open Government Program and Internet Public Interest Opportunities Program (IPIOP). Ms. McCall also teaches a course on the Law of Open Government at Georgetown University Law Center and has been appointed to the Freedom of Information Act (FOIA) Modernization Federal Advisory Committee. She works on a variety of issues at EPIC, including consumer protection, open government requests, amicus curiae briefs, and national security matters. Ms. McCall oversees EPIC’s Freedom of Information Act lawsuits and was a co-editor of Litigation Under the Federal Government Laws 2010. Ms. McCall has been published in the New York Times and has co-authored several amicus curiae briefs on privacy issues to the Supreme Court of the United States. She has been invited to speak on privacy and open government issues in a variety of academic and conference venues, including the EU’s MAPPING Project, the 2009 Computers, Freedom, and Privacy Conference, the Internet Governance Forum USA 2009 Conference, Due Law School’s Center on Law, Ethics, and National Security, and the New England Consortium of State Labor Relations Agencies 11th Annual Conference. Ms. McCall has also provided expert commentary for local, national, and international media, including The New York Times, the Washington Post, Fox News, NPR, MSNBC, USA Today, the Wall Street Journal, and Al Jazeera. She is the Secretary of the American Society of Access Professionals and an Advisory Board Member of the Collaboration on Government Secrecy.
+Ms. McCall is a graduate of Cornell Law School and graduated magna cum laude from the University of Pittsburgh with a B.A. in English Literature. While in law school, she interned at the American Civil Liberties Union in Pittsburgh and at EPIC. Ms. McCall was the president of the Cornell Law School National Lawyers Guild and was awarded Cornell’s Freeman Prize for Civil and Human Rights.
+                                    </div></a>
+
+                              
+								
+                             
+							</div>
+						</div>
+                
+						<div class="about-box-spacer"></div>
+						<div class="about-box">
+							<div class="about-box-text">
+								<span class="about-logo"><i class="fa fa-clock-o fa-2x" style="color: #FFF"></i></span>
+								<h3> <b>
+Mr. Thomas Andrews Drake </b></h3>
+								  <div class="nav-button2"> <a> Bio Coming soon...</a> </div>
+							</div>
+						</div>
+						
+                    </div>
+					</div>
+        </div>
+        </div></div>
 		<!-- END ABOUT PAGE -->
 		
 		<!-- BEGIN CONTACT PAGE -->
@@ -181,7 +277,6 @@ function initialize() {
 		</div>
 
 		<!-- JAVASCRIPT -->
-		<script type="text/javascript" src="js/jquery.js"></script>
 			
 			<!-- All set up / customisation variables for slideshow and video background etc. in custom.js file -->
 			<script type="text/javascript" src="custom.js"></script>

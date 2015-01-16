@@ -15,7 +15,7 @@ var preloader = 'off';
 
 var bgImgOverlay = 'off';
 var bgOverlayColour = '#000000';
-var bgOverlayOpacity = '0.4';
+var bgOverlayOpacity = '0.5';
 
 
 // ************************************************************* //
@@ -57,4 +57,4 @@ var videoMuted = true;
 // Set up the date and time that will be counted down to
 // Enter date in the format (24 hr clock): DD Month YYYY HH:MM:SS for example: 01 January 2015 23:04:00
 
-var countdownDate = "21 April 2015 9:00:00";
+var countdownDate = "19 March 2015 9:00:00";

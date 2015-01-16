@@ -661,7 +661,7 @@ a.social-button:hover {
 
 .about-container .about-box {
 	display: table-cell;
-	width: 28%;
+	width: 44%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -712,7 +712,10 @@ a.social-button:hover {
 	margin: 0px;
 	font-weight: 400;
 	color: white;
+   
 }
+h3 b {
+     font-size: 24px;}
 
 .about-container .about-box p {
 	margin-bottom: 0px;

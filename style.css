@@ -126,3 +126,11 @@ a:hover {
 	.buttons .spacer {
 		width: 0%;
 	}
+.about-row {
+    width:100%;
+    display:table-row;
+}
+
+.content2 {
+    display:none;
+}
