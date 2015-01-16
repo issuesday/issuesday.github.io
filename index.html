@@ -21,9 +21,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script>
-        var map;
-function initialize() {
+      
+        <script>
+              google.maps.event.addDomListener(window, 'load', initialize);
+
+      function initialize() {
   var myLatlng = new google.maps.LatLng(29.526160,-98.423735);
   var mapOptions = {
     zoom: 13,
@@ -37,12 +39,11 @@ function initialize() {
       title: "Saint Mary's Hall"
   });
 }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
 google.maps.event.addDomListener(window, "resize", function() {
  var center = map.getCenter();
  google.maps.event.trigger(map, "resize");
  map.setCenter(center); 
+      
 });
         </script>
 	</head>
@@ -64,6 +65,7 @@ google.maps.event.addDomListener(window, "resize", function() {
 							<a class="nav-button" onclick="showSection('section-about')">About </a>
 							<a class="nav-button" onclick="showSection('section-topic')">Speaker Info</a>
 							<a class="nav-button" onclick="showSection('section-contact')">Contact</a>
+                          
 						</div>
 						<div id="countdown">
 							<div class="countdown-elem elem-days">
