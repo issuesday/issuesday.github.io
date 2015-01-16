@@ -11,7 +11,7 @@
 // Edit the colour of the CSS background overlay which darkens background images/video by using '#HEX' - use a HEX colour
 // Edit the opacity of the colour overlay - determine how visible the background images/video are between '0' and '1.0'
 
-var preloader = 'off';
+var preloader = 'on';
 
 var bgImgOverlay = 'off';
 var bgOverlayColour = '#000000';
