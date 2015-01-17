@@ -41,56 +41,12 @@ a img {
     bottom: 0;
 	z-index: 100;
 	background-color: rgba(0,0,0,0.4);
-	background-image: url("../images/bg-overlay.png");
+	background-image: url("images/bg-overlay.png");
 	background-repeat: repeat;
 	background-size: 2px 2px;
 	background-position: top left;
 }
 
-.YTPOverlay {
-	background-color: rgba(0,0,0,0.4);
-	background-image: url("../images/bg-overlay.png");
-	background-repeat: repeat;
-	background-size: 2px 2px;
-	background-position: top left;
-}
-
-.videoMuteButton {
-	display: none;
-	width: 30px;
-	height: 30px;
-	overflow: hidden;
-	position: absolute;
-	right: 15px;
-	bottom: 15px;
-	background-color: rgba(255,255,255,0.2);
-}
-
-.videoMuteButton:hover i.fa {
-	color: rgba(255,255,255,1);
-}
-
-.videoButton {
-	width: 30px;
-	height: 30px;
-	display: inline-block;
-	text-align: center;
-	line-height: 30px;
-	font-size: 18px;
-	color: rgba(255,255,255,0.6);
-	cursor: pointer;
-}
-
-.videoButton i.fa {
-	transition: all 0.5s ease;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-}
-
-.videoButton.notmuted.mute {
-	display: none;
-}
 
 .noscript-error {
 	position: relative;
@@ -153,26 +109,6 @@ a img {
 	-o-animation: squareSpin 3s linear 0s infinite;
 }
 
-.contact-loading .square-loader-wrap, .signup-waiting .square-loader-wrap {
-	width: 42px;
-	height: 42px;
-	float: right;
-	position: relative;
-	margin-right: 5px;
-}
-
-.signup-waiting .square-loader-wrap {
-	float: none;
-	margin:0 auto;
-	margin-top: 5px;
-	margin-right: 0px;
-}
-
-.contact-loading .square-loader, .signup-waiting .square-loader {
-	height: 15px;
-	width: 15px;
-	margin: 3px;
-}
 
 @-moz-keyframes f_fadeG {
 	0% { transform: rotate(0deg); -moz-transform: rotate(0deg); }
@@ -214,14 +150,6 @@ a img {
 	100% { transform: rotate(360deg); }
 }
 
-.contact-loading {
-	display: none;
-	width: 100%;
-	height: 50px;
-	position: relative;
-	z-index: 500;
-	margin-top: -50px;
-}
 
 .mini-container {
 	width: 80%;
@@ -261,29 +189,6 @@ a.nav-button:hover {
     background: rgba(255,255,255,1);
 }
 
-a.social-button {
-	display: inline-block;
-	text-decoration: none;
-	height: auto;
-	width: 30px;
-	text-align: center;
-	border: none !important;
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-top: 15px;
-	font-weight: 400;
-	color: rgba(255,255,255,0.4);
-	background-color: transparent;
-	cursor: pointer;
-	transition: all 0.5s ease;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-}
-
-a.social-button:hover {
-	color: rgba(255,255,255,1);
-}
 
 .scrollsection {
 	position: absolute;
@@ -466,183 +371,6 @@ a.social-button:hover {
 }
 
 
-/* === SUBSCRIBE === */
-
-.subscribe {
-	width: 100%;
-	height: 50px;
-	background-color: transparent;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	color: rgba(255,255,255,0.6);
-	font-weight: 300;
-	line-height: 22px;
-	margin:0 auto;
-	margin-top: 50px;
-	transition: color 0.5s ease, background-color 0.5s ease;
-	-webkit-transition: color 0.5s ease, background-color 0.5s ease;
-	-moz-transition: color 0.5s ease, background-color 0.5s ease;
-	-o-transition: color 0.5s ease, background-color 0.5s ease;
-}
-
-.signup {
-	width: 100%;
-	height: 50px;
-	float: right;
-	border-radius: 0px;
-	border-top-right-radius: 4px;
-	border-bottom-right-radius: 4px;
-	margin-top: 10px;
-	display: none;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	text-align: center;
-	line-height: 50px;
-	font-weight: 400;
-	transition: width 2s ease;
-	-webkit-transition: width 2s ease;
-	-moz-transition: width 2s ease;
-	-o-transition: width 2s ease;
-	-webkit-background-clip: padding-box;
-}
-
-.signup-waiting {
-	width: 100%;
-	height: auto;
-	min-height: 50px;
-}
-
-.signup-waiting #floatingCirclesG-small {
-	float: none;
-	margin:0 auto;
-	margin-top: 12px;
-}
-
-.signup-error {
-	color: white;
-}
-
-.signup-success {
-	width: 100%;
-	background-color: transparent;
-	border: 1px solid rgba(255,255,255,0.3);
-	margin-top: -50px;
-	color: white;
-	position: relative;
-	z-index: 2000;
-	border-radius: 0px;
-}
-
-#signup-response .loading {
-	width: 18px;
-	height: 18px;
-	position: relative;
-	margin-top: 15px;
-  	border-bottom: 3px solid rgba(233,233,233,1);
-	border-left: 3px solid rgba(233,233,233,1);
-	border-right: 3px solid rgba(233,233,233,0.5);
-	border-top: 3px solid rgba(233,233,233,0.5);
-}
-
-.enteremail {
-	height: 50px;
-	padding-left: 20px;
-	padding-right: 20px;
-	width: 89%;
-	font-family: 'Roboto', sans-serif;
-	outline: none;
-	border-radius: 0px;
-	border: 1px solid rgba(255,255,255,0.3);
-	background-color: rgba(255,255,255,0.1);
-	color: rgba(255,255,255,0.6);
-	font-size: 16px;
-	font-weight: 400;
-	float: left;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-background-clip: padding-box;
-	transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
-	-webkit-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
-	-moz-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
-	-o-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
-}
-
-.enteremail:focus {
-	border: 1px solid rgba(255,255,255,1);
-	color: rgba(255,255,255,1);
-}
-
-::-webkit-input-placeholder {
-	color: rgba(255,255,255,0.6);
-}
-:-moz-placeholder {
-	color: rgba(255,255,255,0.6);
-}
-::-moz-placeholder {
-	color: rgba(255,255,255,0.6);
-}
-:-ms-input-placeholder {
-	color: rgba(255,255,255,0.6);
-}
-
-.placeholder { rgba(102,102,102,0.6); }
-
-.subscribe .signup-button {
-	width: 11%;
-	height: 50px;
-	position: relative;
-	float: left;
-	border-radius: 0px;
-	font-weight: 400;	
-	background-color: rgba(255,255,255,0.1);
-	color: rgba(255,255,255,0.6);
-	border: none;
-	outline: none;
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	border-radius: 0px;
-	padding-left: 15px;
-	padding-right: 15px;
-	font-weight: 400;
-	border: 1px solid rgba(255,255,255,0.3);
-	cursor: pointer;
-	z-index: 100;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-appearance: none;
-	-webkit-background-clip: padding-box;
-	transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
-	-webkit-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
-	-moz-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
-	-o-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
-}
-
-.subscribe .signup-button:hover {
-	border: 1px solid rgba(255,255,255,1);
-	color: rgba(255,255,255,1);
-}
-
-.signup-button.signup-button-error {
-	background-color: #ff7d7d;
-	color: white !important;
-}
-
-.signup-button.signup-button-error:hover {
-	background-color: #ff7d7d !important;
-	color: white !important;
-}
-
-.signup-button.signup-button-success {
-	background-color: transparent;
-	color: transparent !important;
-}
-
-
-/* === ABOUT === */
 
 .about-container {
 	width: 100%;
@@ -689,7 +417,7 @@ a.social-button:hover {
 	box-sizing: border-box;
 }
 
-.about-container .about-box span.about-logo {
+.about-container .about-box span.about-pic {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -740,10 +468,6 @@ h3 b {
 	width: 5%;
 }
 
-.contact-box.right {
-	position: relative;
-	margin-bottom: 0px;
-}
 
 .contact-box.left ul {
 	list-style: none;
@@ -770,100 +494,6 @@ h3 b {
 	float: left;
 }
 
-.antispam {
-	display: none !important;
-}
-
-.contact-box.right input[type='text'], .contact-box.right input[type='email'] {
-	height: 50px;
-	padding-left: 20px;
-	padding-right: 20px;
-	width: 100%;
-	font-family: 'Roboto', sans-serif;
-	outline: none;
-	border-radius: 0px;
-	border: 1px solid rgba(255,255,255,0.3);
-	background-color: rgba(255,255,255,0.1);
-	color: rgba(255,255,255,0.6);
-	font-size: 16px;
-	font-weight: 400;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-background-clip: padding-box;
-	transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
-	-webkit-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
-	-moz-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
-	-o-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
-	margin-bottom: 20px;
-}
-
-.contact-box.right input[type='text']:focus, .contact-box.right input[type='email']:focus {
-	border: 1px solid rgba(255,255,255,1);
-	color: rgba(255,255,255,1);
-}
-
-.contact-box.right .message-box {
-	width: 100%;
-	max-width: 100%;
-	min-height: 200px;
-	padding: 20px;
-	font-family: 'Roboto', sans-serif;
-	outline: none;
-	border-radius: 0px;
-	border: 1px solid rgba(255,255,255,0.3);
-	background-color: rgba(255,255,255,0.1);
-	color: rgba(255,255,255,0.6);
-	font-size: 16px;
-	font-weight: 400;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-background-clip: padding-box;
-	transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
-	-webkit-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
-	-moz-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
-	-o-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
-	margin-bottom: 20px;
-	resize: vertical;
-}
-
-.contact-box.right .message-box:focus {
-	border: 1px solid rgba(255,255,255,1);
-	color: rgba(255,255,255,1);
-}
-
-.contact-box.right input[type='submit'] {
-	width: auto;
-	height: 50px;
-	background-color: rgba(255,255,255,0.1);
-	color: rgba(255,255,255,0.6);
-	border: none;
-	outline: none;
-	display: inline-block;
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	border-radius: 0px;
-	padding-left: 15px;
-	padding-right: 15px;
-	font-weight: 400;
-	border: 1px solid rgba(255,255,255,0.3);
-	cursor: pointer;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-appearance: none;
-	-webkit-background-clip: padding-box;
-	transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
-	-webkit-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
-	-moz-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
-	-o-transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
-}
-
-.contact-box.right input[type='submit']:hover {
-	border: 1px solid rgba(255,255,255,1);
-	color: rgba(255,255,255,1);
-}
 
 .contact-box a {
 	color: inherit;
