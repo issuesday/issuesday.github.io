@@ -19,7 +19,8 @@
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
       
         <script>
@@ -39,6 +40,9 @@
       title: "Saint Mary's Hall"
   });
 }
+            google.maps.event.addListenerOnce(map, 'idle', function() {
+   google.maps.event.trigger(map, 'resize');
+});
 google.maps.event.addDomListener(window, "resize", function() {
  var center = map.getCenter();
  google.maps.event.trigger(map, "resize");
@@ -67,27 +71,7 @@ google.maps.event.addDomListener(window, "resize", function() {
 							<a class="nav-button" onclick="showSection('section-contact')">Contact</a>
                           
 						</div>
-						<div id="countdown">
-							<div class="countdown-elem elem-days">
-								
-									<h2 class="days">00</h2>
-								
-								<span class="time_Days">days</span>
-							</div><!--
-							--><div class="countdown-elem elem-hours">
-									<h2 class="hours">00</h2>
-								
-								<span class="time_Hours">hours</span>
-							</div><!--
-							--><div class="countdown-elem elem-minutes">
-									<h2 class="minutes">00</h2>
-								<span class="time_Minutes">minutes</span>
-							</div><!--
-							--><div class="countdown-elem elem-seconds">
-									<h2 class="seconds">00</h2>
-								<span class="time_Seconds">seconds</span>
-							</div>
-						</div>
+						
 						
 						<div class="social-nav">
 							<!-- Social Icons -->
@@ -116,6 +100,7 @@ google.maps.event.addDomListener(window, "resize", function() {
 				</div>
                 <div class="content" style="text-align:center">
                     <h2>Previous Issues Day Brochures</h2>
+							<a class="nav-button" href="id2015.pdf" target="_blank">2015</a>           
 							<a class="nav-button" href="http://lgdata.s3-website-us-east-1.amazonaws.com/docs/1199/1303996/Issues_Day_Program_2014_for_website.pdf" target="_blank">2014</a>
 							<a class="nav-button" href="http://lgdata.s3-website-us-east-1.amazonaws.com/docs/1199/1304339/Issues_Day_Program_2013_FINAL_update.pdf" target="_blank">2013</a>
 							<a class="nav-button" href="http://lgdata.s3-website-us-east-1.amazonaws.com/docs/1199/1304341/Issues_Day_Program_2012.pdf" target="_blank">2012</a>
@@ -136,7 +121,14 @@ google.maps.event.addDomListener(window, "resize", function() {
 					<h2>Speakers</h2>
 				</div>
 				<div class="content">
-					
+					<style>
+					    .img-circle {
+                            width:70%;
+                            height: 70%;
+                            max-width: 150px;
+                            max-height: 150px;
+}
+					</style>
 
 				 <script>
                                $(function() {
@@ -146,75 +138,79 @@ google.maps.event.addDomListener(window, "resize", function() {
 });
                                 </script>   	
                 <div class="about-container">
-                    <div class="about-row" style="padding-bottom: 40px;">
 						
 						<div class="about-box">
 							<div class="about-box-text">
-								<span class="about-pic"><img src="img/daniel.png"></span>
+								<span class="about-pic"><img class="img-circle" src="img/castro.png"></span>
                                 
-                                <h3><b>Mr. Daniel Castro</b><br>
+                                <h3><b>Mr. Daniel Castro</b><br></h3><p style="height: 100px">
                                     Senior Analyst,<br>
                                     Information Technology and Innovation Foundation
                                     <br><br>
-                                </h3>
-                                <div class="nav-button2"> <a> Read More</a> </div>
-                                    <div class="slidecontent"> 
-                                       Mr. Castro is a Senior Analyst with the Information Technology and Innovation Foundation and Director of the Center for Data Innovation. He writes and speaks on a variety of issues related to information technology and internet policy, including privacy, security, intellectual property, internet governance, e-government, and accessibility for people with disabilities. His work has been quoted and cited in numerous media outlets, including The Washington Post, The Wall Street Journal, NPR, USA Today, Bloomberg News, and BusinessWeek. In 2013, Mr. Castro was named to FedScoop’s list of “Top 25 most influential people under 40 in government and tech.”
-Before joining ITIF, Mr. Castro worked as an IT analyst at the Government Accountability Office (GAO) where he audited IT security and management controls at various government agencies. He contributed to GAO reports on the state of information security at a variety of federal agencies, including the Securities and Exchange Commission (SEC) and the Federal Deposit Insurance Corporation (FDIC). In addition, Mr. Castro was a Visiting Scientist at the Software Engineering Institute (SEI) in Pittsburg, Pennsylvania where he developed virtual training simulations to provide clients with hands-on training of the latest information security tools.
-He as a B.S. in Foreign Service from Georgetown University and an M.S. in Information Security Technology and Management from Carnegie Mellon University.
-                                    </div>
-<style>
-                                .slidecontent {display:none}
-                                div.nav-button:hover {
-                                    cursor:pointer
-                                }
-                                </style>
-                                 
-								
+                                </p>
+                                
+								<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3">
+  More Info
+</button>
                              
 							</div>
 						</div>
 						<div class="about-box-spacer"></div>
 						<div class="about-box">
 							<div class="about-box-text">
-								<span class="about-pic"><img src="img/asim.png"></span>
-                                <h3><b>Mr. Asim Ghafoor</b><br>
+								<span class="about-pic"><img class="img-circle" src="img/asim.png"></span>
+                                <h3><b>Mr. Asim Ghafoor</b></h3><p style="height: 100px">
 Attorney at Law,<br>
 The Law Office of Asim Ghafoor
                                     <br><br>
-                                </h3>
-                                  <div class="nav-button2"> <a> Read More</a> </div>
-                                    <div class="slidecontent"> 
-                                        Mr. Ghafoor has over two decades of experience in advising public policymakers and clients on a variety of legal, political, and trade issues. He is a frequent speaker at seminars, conferences, and in the media on topics of law enforcement, international affairs, finance and politics. He has spoken at Harvard, the University of Virginia School of Law, and Chicago’s Kent College of Law.
-Mr. Ghafoor has represented a number of companies, institutions, and individuals, both overseas and in the U.S., on matters of compliance, regulation, and litigation. As a business law attorney, he has assisted and advised on the creation of a number of businesses and non-profits. In addition, he has extensive experience with trade missions and Congressional delegations, and he assisted in planning and executing official missions to North Africa, the Middle East and Asia.
-Previously, Mr. Ghafoor worked in the Texas House of Representatives, giving him great insight into the legislative and law-making process. From 1997 to 2000, he served as Legislative Assistant to Congressman Ciro D. Rodriguez (D-TX) and advised the Congressman on a variety of issues, including international affairs, banking, civil rights, transportation, armed services and veterans’ affairs.
-Mr. Ghafoor earned his JD from the University of Texas School of Law.
-                                    </div></a>
+                                </p>
+                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  More Info
+</button>
+                                    
 
                            
+                             
+							</div>
+						</div>
+               						<div class="about-box-spacer"></div>
+
+							<div class="about-box">
+							<div class="about-box-text">
+								<span class="about-pic"><img class="img-circle" src="img/ginger.png"></span>
+                                <h3><b>Ms. Ginger McCall<br></b></h3> <p style="height: 100px">
+Associate Director,<br>
+                                Electronic Privacy Information Center (EPIC)<br><br></p>
+                               
+
+                              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+  More Info
+</button>
+                                
+
+	
 								
                              
 							</div>
 						</div>
-                    </div>
-               
-                    <div class="about-row" style="padding-bottom: 40px;">
+                    
+                    <div class="about-box-spacer"></div>
+
 							<div class="about-box">
 							<div class="about-box-text">
-								<span class="about-pic"><img src="img/mccall.png"></span>
-                                <h3><b>Ms. Ginger McCall<br></b>
+								<span class="about-pic"><img class="img-circle" src="img/hara.png"></span>
+                                <h3><b>Colonel Michael Harasimowicz<br></b></h3><p>
 Associate Director,<br>
-Electronic Privacy Information Center (EPIC)<br>
-Director,<br>
-Open Government Program and EPIC IPIOP Program <br><br>
-                                </h3>
-                                  <div class="nav-button2"> <a> Read More</a> </div>
-                                    <div class="slidecontent"> 
-                                       Ms. McCall is Associate Director of EPIC and Director of EPIC’s Open Government Program and Internet Public Interest Opportunities Program (IPIOP). Ms. McCall also teaches a course on the Law of Open Government at Georgetown University Law Center and has been appointed to the Freedom of Information Act (FOIA) Modernization Federal Advisory Committee. She works on a variety of issues at EPIC, including consumer protection, open government requests, amicus curiae briefs, and national security matters. Ms. McCall oversees EPIC’s Freedom of Information Act lawsuits and was a co-editor of Litigation Under the Federal Government Laws 2010. Ms. McCall has been published in the New York Times and has co-authored several amicus curiae briefs on privacy issues to the Supreme Court of the United States. She has been invited to speak on privacy and open government issues in a variety of academic and conference venues, including the EU’s MAPPING Project, the 2009 Computers, Freedom, and Privacy Conference, the Internet Governance Forum USA 2009 Conference, Due Law School’s Center on Law, Ethics, and National Security, and the New England Consortium of State Labor Relations Agencies 11th Annual Conference. Ms. McCall has also provided expert commentary for local, national, and international media, including The New York Times, the Washington Post, Fox News, NPR, MSNBC, USA Today, the Wall Street Journal, and Al Jazeera. She is the Secretary of the American Society of Access Professionals and an Advisory Board Member of the Collaboration on Government Secrecy.
-Ms. McCall is a graduate of Cornell Law School and graduated magna cum laude from the University of Pittsburgh with a B.A. in English Literature. While in law school, she interned at the American Civil Liberties Union in Pittsburgh and at EPIC. Ms. McCall was the president of the Cornell Law School National Lawyers Guild and was awarded Cornell’s Freeman Prize for Civil and Human Rights.
-                                    </div></a>
+Commander, 688th Cyberspace Wing <br><br>
+                                </p>
+                          
 
-                              
+                              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal5">
+  More Info
+</button>
+                                
+
+	
 								
                              
 							</div>
@@ -223,17 +219,120 @@ Ms. McCall is a graduate of Cornell Law School and graduated magna cum laude fro
 						<div class="about-box-spacer"></div>
 						<div class="about-box">
 							<div class="about-box-text">
-								<span class="about-pic"><i class="fa fa-clock-o fa-2x" style="color: #FFF"></i></span>
+								<span class="about-pic"><img class="img-circle" src="img/drake.png"></span>
 								<h3> <b>
-Mr. Thomas Andrews Drake </b></h3>
-								  <div class="nav-button2"> <a> Bio Coming soon...</a> </div>
+Mr. Thomas Drake </b></h3>
+    <p style="height: 100px">Former Senior Executive at the National Security Agency
+</p>
+    
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal4">
+  More Info
+</button>
 							</div>
 						</div>
 						
-                    </div>
 					</div>
         </div>
-        </div></div>
+        </div>
+        
+        
+        <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" style="color: #000">Colonel Michael C. Harasimowicz Bio</h4>
+      </div>
+      <div class="modal-body" style="color:#000">
+        Colonel Michael C. Harasimowicz is Commander, 688th Cyberspace Wing, Joint Base San Antonio - Lackland, Texas. In this capacity, he leads over 1,500 professionals in developing, training, exercising and testing information operations tactics, techniques and procedures; analyzing and mitigating U.S. cyberspace vulnerabilities; integrating emerging information dominance capabilities in support of Air Force, joint and Department of Defense warfighters; engineering, deploying and delivering survivable and resilient cyber infrastructure (deployed and in-garrison); and integrates communications and computer systems designed to increase the combat effectiveness of Air Force and Department of Defense elements.
+
+Colonel Harasimowicz entered the Air Force as a civilian network engineer for Rome Labs at Griffiss AFB, N.Y. After receiving his commission, Colonel Harasimowicz's operational assignments have kept him at the forefront of innovation to include pioneering the F-16 concept of operations for suppression of enemy air defenses, the development of the Air Force's Air Operations Center, and the integration of stealth airpower and cyber capabilities. He has led intelligence integration and operational planning for across every major theater of operations. 
+
+Colonel Harasimowicz has commanded the 91st Network Warfare Squadron and the 33rd Information Operations Squadron. The 91st NWS delivered cyber effects to Central Command's counter-insurgency operations in Multi-National Forces - Iraq with concurrent cyber contingency and exploitation operations across multiple geographic combatant commands. As the commander of the Air Force Computer Emergency Response Team, he led his team to earn the NSA Information Assurance Rowlett Trophy for 2007 at the Department of Defense level. He also directed operations for U.S. Air Force cyber tactics development including U.S. Strategic Command's first global network defense exercise. Additionally, he served as the Director for Defense Policy and Strategy within President Obama's National Security Council focused on cyber policy and homeland defense.
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>	
+
+                    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" style="color: #000">Mr. Thomas Drake Bio</h4>
+      </div>
+      <div class="modal-body" style="color:#000">
+Thomas Drake was a senior executive at the National Security Agency. His first day on the job was 9/11. While at NSA he witnessed massive multi-billion dollar contract fraud, government wrongdoing, the cover up of critical pre- and post-9/11 intelligence, as well as widespread violations of the 4th Amendment and privacy rights of citizens through a super secret mass dragnet surveillance program approved by the White House. While at the NSA Drake was also a visiting professor of strategic leadership and information strategies at the National Defense University with the Industrial College of the Armed Forces. 
+
+He worked as a principal in a couple of boutique dot coms specializing in software and systems engineering and information technology. He was at Booz | Allen | Hamilton as a management, strategy and technology consultant and software quality engineer from 1991-1998. From 1992 to 1997, Drake also served as an all-source Intelligence Officer in the US Navy Reserve at the National Military Joint Intelligence Center (NMJIC), Defense Intelligence Agency (DIA) on the ELINT desk, Terrorism Desk, and the Middle East/North Africa Desk. In 1989, he served as an all-source imagery analyst with US intelligence (CIA). Prior to 1989, he served in the US Air Force on active duty as an airborne Cryptologic Linguist specializing in East Germany during the Cold War and as a Mission Crew Supervisor on an electronic warfare airborne platform.
+
+A recipient of several awards for whistleblowing, Drake now writes, speaks and teaches on whistleblowing, the 1st and 4th Amendment, civil liberties, secrecy, surveillance and abusive government power.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>	
+
+        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+       
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" style="color: #000">Mr. Daniel Castro Bio</h4>
+      </div>
+      <div class="modal-body" style="color:#000">
+       Mr. Castro is a Senior Analyst with the Information Technology and Innovation Foundation and Director of the Center for Data Innovation. He writes and speaks on a variety of issues related to information technology and internet policy, including privacy, security, intellectual property, internet governance, e-government, and accessibility for people with disabilities. His work has been quoted and cited in numerous media outlets, including The Washington Post, The Wall Street Journal, NPR, USA Today, Bloomberg News, and BusinessWeek. In 2013, Mr. Castro was named to FedScoop’s list of “Top 25 most influential people under 40 in government and tech.” Before joining ITIF, Mr. Castro worked as an IT analyst at the Government Accountability Office (GAO) where he audited IT security and management controls at various government agencies. He contributed to GAO reports on the state of information security at a variety of federal agencies, including the Securities and Exchange Commission (SEC) and the Federal Deposit Insurance Corporation (FDIC). In addition, Mr. Castro was a Visiting Scientist at the Software Engineering Institute (SEI) in Pittsburg, Pennsylvania where he developed virtual training simulations to provide clients with hands-on training of the latest information security tools. He as a B.S. in Foreign Service from Georgetown University and an M.S. in Information Security Technology and Management from Carnegie Mellon University.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>	
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" style="color: #000">Ms. Ginger McCall Bio</h4>
+      </div>
+      <div class="modal-body" style="color:#000">
+       Ms. McCall is Associate Director of EPIC and Director of EPIC’s Open Government Program and Internet Public Interest Opportunities Program (IPIOP). Ms. McCall also teaches a course on the Law of Open Government at Georgetown University Law Center and has been appointed to the Freedom of Information Act (FOIA) Modernization Federal Advisory Committee. She works on a variety of issues at EPIC, including consumer protection, open government requests, amicus curiae briefs, and national security matters. Ms. McCall oversees EPIC’s Freedom of Information Act lawsuits and was a co-editor of Litigation Under the Federal Government Laws 2010. Ms. McCall has been published in the New York Times and has co-authored several amicus curiae briefs on privacy issues to the Supreme Court of the United States. She has been invited to speak on privacy and open government issues in a variety of academic and conference venues, including the EU’s MAPPING Project, the 2009 Computers, Freedom, and Privacy Conference, the Internet Governance Forum USA 2009 Conference, Due Law School’s Center on Law, Ethics, and National Security, and the New England Consortium of State Labor Relations Agencies 11th Annual Conference. Ms. McCall has also provided expert commentary for local, national, and international media, including The New York Times, the Washington Post, Fox News, NPR, MSNBC, USA Today, the Wall Street Journal, and Al Jazeera. She is the Secretary of the American Society of Access Professionals and an Advisory Board Member of the Collaboration on Government Secrecy.
+Ms. McCall is a graduate of Cornell Law School and graduated magna cum laude from the University of Pittsburgh with a B.A. in English Literature. While in law school, she interned at the American Civil Liberties Union in Pittsburgh and at EPIC. Ms. McCall was the president of the Cornell Law School National Lawyers Guild and was awarded Cornell’s Freeman Prize for Civil and Human Rights.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>	
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" style="color: #000">Mr. Asim Ghafoor Bio</h4>
+      </div>
+      <div class="modal-body" style="color:#000">
+        Mr. Ghafoor has over two decades of experience in advising public policymakers and clients on a variety of legal, political, and trade issues. He is a frequent speaker at seminars, conferences, and in the media on topics of law enforcement, international affairs, finance and politics. He has spoken at Harvard, the University of Virginia School of Law, and Chicago’s Kent College of Law.
+Mr. Ghafoor has represented a number of companies, institutions, and individuals, both overseas and in the U.S., on matters of compliance, regulation, and litigation. As a business law attorney, he has assisted and advised on the creation of a number of businesses and non-profits. In addition, he has extensive experience with trade missions and Congressional delegations, and he assisted in planning and executing official missions to North Africa, the Middle East and Asia.
+Previously, Mr. Ghafoor worked in the Texas House of Representatives, giving him great insight into the legislative and law-making process. From 1997 to 2000, he served as Legislative Assistant to Congressman Ciro D. Rodriguez (D-TX) and advised the Congressman on a variety of issues, including international affairs, banking, civil rights, transportation, armed services and veterans’ affairs.
+Mr. Ghafoor earned his JD from the University of Texas School of Law.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>			
+            
+        </div>
 		<!-- END ABOUT PAGE -->
 		
 		<!-- BEGIN CONTACT PAGE -->
@@ -256,9 +355,7 @@ Mr. Thomas Andrews Drake </b></h3>
 						</ul>
 					</div>
 					<div class="contact-box-spacer"></div>
-					<div class="contact-box right" id="map-canvas">
-						
-						</div>
+					
 					</div>
 				</div>
 			</div>
@@ -268,6 +365,7 @@ Mr. Thomas Andrews Drake </b></h3>
 		<!-- Background Video container -->
 		
 		<!-- Loading Page Overlay -->
+
 		<div class="page-loading">
 			<noscript><div class="noscript-error"><i class="fa fa-info-circle"></i>Enable JavaScript to see this site working properly.</div></noscript>
 			<div class="square-loader-wrap">
@@ -277,6 +375,7 @@ Mr. Thomas Andrews Drake </b></h3>
 				<div class="square-loader"></div>
 			</div>
 		</div>
+
 
 		<!-- JAVASCRIPT -->
 			
@@ -362,6 +461,6 @@ Mr. Thomas Andrews Drake </b></h3>
 				}
 			});
 		</script>
-      
+                                 
 	</body>
 </html>
